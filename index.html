@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Jaimin — Portfolio</title>
+  <meta name="description" content="Portfolio of Jaimin — student, creator, future entrepreneur." />
+  <style>
+    /* ---- Reset-ish ---- */
+    :root{
+      --bg:#0f1724; --card:#0b1220; --muted:#94a3b8; --accent:#7c3aed; --glass: rgba(255,255,255,0.04);
+      --maxw:1100px;
+      color-scheme: dark;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial;}
+    body{background:linear-gradient(180deg,#071028 0%, #0b1220 100%);color:#e6eef8;padding:32px;display:flex;justify-content:center}
+    .wrap{width:100%;max-width:var(--maxw)}
+
+    /* ---- Header / Nav ---- */
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:28px}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:52px;height:52px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#3b82f6);display:flex;align-items:center;justify-content:center;font-weight:700}
+    nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-weight:600}
+    nav a:hover{color:#fff}
+
+    /* ---- Hero ---- */
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:24px;align-items:center;margin-bottom:28px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:14px;padding:22px;box-shadow:0 8px 30px rgba(2,6,23,0.6);backdrop-filter: blur(6px)}
+    h1{margin:0 0 8px 0;font-size:32px;letter-spacing:-0.6px}
+    p.lead{margin:0;color:var(--muted)}
+    .cta{margin-top:16px;display:flex;gap:12px}
+    .btn{padding:10px 14px;border-radius:10px;font-weight:700;border:none;cursor:pointer}
+    .btn-primary{background:linear-gradient(90deg,var(--accent),#06b6d4);color:#fff}
+    .btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+
+    /* ---- Project grid ---- */
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px}
+    .proj{padding:14px;border-radius:10px;background:var(--card);border:1px solid rgba(255,255,255,0.02)}
+    .proj h3{margin:0 0 6px 0;font-size:16px}
+    .tags{display:flex;gap:8px;flex-wrap:wrap}
+    .tag{font-size:12px;padding:6px 8px;border-radius:8px;background:var(--glass);color:var(--muted)}
+
+    /* ---- Skills / Contact ---- */
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:20px}
+    ul.skills{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:10px}
+    ul.skills li{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:8px 10px;border-radius:8px;font-weight:600}
+
+    footer{margin-top:26px;color:var(--muted);font-size:13px;text-align:center}
+
+    /* ---- Responsiveness ---- */
+    @media (max-width:980px){.hero{grid-template-columns:1fr;}.grid{grid-template-columns:repeat(2,1fr)}.wrap{padding:0 14px}}
+    @media (max-width:640px){.grid{grid-template-columns:1fr}.two-col{grid-template-columns:1fr}.logo{width:44px;height:44px}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">J</div>
+        <div>
+          <div style="font-weight:800">Jaimin</div>
+          <div style="font-size:12px;color:var(--muted)">Student • Creator • Future Founder</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="card">
+        <h1>Hey — I'm Jaimin.</h1>
+        <p class="lead">I study, make things, learn video editing & design, and I'm figuring out a business I actually want to run. This is a compact portfolio to show what I build and what I care about.</p>
+
+        <div class="cta">
+          <a class="btn btn-primary" href="#projects">See projects</a>
+          <a class="btn btn-ghost" href="#contact">Let's talk</a>
+        </div>
+
+        <div style="margin-top:16px;color:var(--muted);font-size:13px">
+          Location: India • Available for collabs & internships
+        </div>
+      </div>
+
+      <aside class="card">
+        <h3>Quick stats</h3>
+        <div style="display:flex;gap:12px;margin-top:12px">
+          <div style="flex:1">
+            <div style="font-weight:800;font-size:20px">19</div>
+            <div style="font-size:12px;color:var(--muted)">Years old</div>
+          </div>
+          <div style="flex:1">
+            <div style="font-weight:800;font-size:20px">6'2"</div>
+            <div style="font-size:12px;color:var(--muted)">Height</div>
+          </div>
+        </div>
+
+        <div style="margin-top:12px">
+          <strong style="font-size:13px">Top skills</strong>
+          <div class="tags" style="margin-top:8px">
+            <span class="tag">After Effects</span>
+            <span class="tag">Video Editing</span>
+            <span class="tag">Motion Design</span>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section id="projects" class="card">
+      <h2 style="margin-top:0">Projects</h2>
+      <p style="color:var(--muted);margin-top:6px;margin-bottom:12px">A few things I worked on — include links, short descriptions, tech used. Replace or expand as needed.</p>
+
+      <div class="grid">
+        <article class="proj">
+          <h3>1) Cinematic Metro Reel</h3>
+          <div style="font-size:13px;color:var(--muted);margin-bottom:10px">Short cinematic reel shot in metro — editing, color grading, sound design.</div>
+          <div class="tags"><span class="tag">After Effects</span><span class="tag">Premiere Pro</span></div>
+        </article>
+
+        <article class="proj">
+          <h3>2) College Club Promo</h3>
+          <div style="font-size:13px;color:var(--muted);margin-bottom:10px">Promo video and poster designs for Computer & Gaming Club.</div>
+          <div class="tags"><span class="tag">Figma</span><span class="tag">DaVinci Resolve</span></div>
+        </article>
+
+        <article class="proj">
+          <h3>3) Logo Reveal — PressF</h3>
+          <div style="font-size:13px;color:var(--muted);margin-bottom:10px">Animated logo reveal with custom easing & bounce timing in AE.</div>
+          <div class="tags"><span class="tag">After Effects</span><span class="tag">Animation</span></div>
+        </article>
+
+      </div>
+
+    </section>
+
+    <section class="two-col">
+      <div class="card">
+        <h3 id="about">About</h3>
+        <p style="color:var(--muted)">I'm a student learning video editing, motion design, and building a toolkit to start a creative business. I'm blunt, experimental, and prefer shipping things quickly over perfect polishing.</p>
+
+        <h4 style="margin-top:12px">What I'm exploring</h4>
+        <ul style="color:var(--muted);margin-top:8px">
+          <li>Short-form cinematic reels for brands</li>
+          <li>Motion-designed social templates</li>
+          <li>Lightweight productized video services</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Skills & Tools</h3>
+        <ul class="skills" style="margin-top:12px">
+          <li>After Effects</li>
+          <li>Premiere Pro</li>
+          <li>DaVinci Resolve</li>
+          <li>Figma</li>
+          <li>Basic HTML/CSS</li>
+        </ul>
+
+        <h4 style="margin-top:12px">Interests</h4>
+        <div style="color:var(--muted);margin-top:8px;font-size:13px">Cricket, Desi Hip Hop, Design systems, Startup ideas</div>
+      </div>
+    </section>
+
+    <section id="contact" class="card" style="margin-top:18px">
+      <h3>Contact</h3>
+      <p style="color:var(--muted);margin-bottom:10px">Want to collab or offer an internship? Email me or connect on socials.</p>
+
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <a class="btn btn-primary" href="mailto:jaimin@example.com">Email me</a>
+        <a class="btn btn-ghost" href="#">LinkedIn</a>
+        <a class="btn btn-ghost" href="#">Instagram</a>
+      </div>
+
+      <div style="margin-top:12px;color:var(--muted);font-size:13px">Pro tip: replace <code>jaimin@example.com</code> with your real email and update project links.</div>
+    </section>
+
+    <footer>
+      Built with minimal fuss — edit the HTML, drop in your files, and ship. Want this exported as a single ZIP or a prettier template? Tell me which style and I’ll rewrite it.
+    </footer>
+  </div>
+</body>
+</html>
